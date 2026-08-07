@@ -52,6 +52,10 @@ img:hover {
     color: #0000ff;
 }
 
+#links a:hover {
+    color: rgb(0, 0, 50);
+}
+
 main {
     padding: 20px;
 }
@@ -184,12 +188,12 @@ footer {
     color: #0000ff;
 }
 
+#contact-links a:hover {
+    color: rgb(0, 0, 50);
+}
+
 #contact-links a img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
-}
-
-a:hover {
-    color: rgb(0, 0, 50);
 }
