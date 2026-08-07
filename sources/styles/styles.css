@@ -189,3 +189,7 @@ footer {
     height: 16px;
     margin-right: 8px;
 }
+
+a:hover {
+    color: rgb(0, 0, 50);
+}
