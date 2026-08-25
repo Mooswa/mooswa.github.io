@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 
+:root {
+    --light-dark-toggle-image: url(../images/moon.svg);
+    --main-color: rgb(0, 255, 255);
+    --main-color-translucent: rgba(0, 255, 255, 0.7);
+    --link-color: rgb(0, 0, 255);
+    --text-color: rgb(0, 0, 50);
+}
+
 body {
     margin: 0;
     background-image: url(../images/background_pattern.webp);
@@ -7,15 +15,35 @@ body {
     background-attachment: fixed;
 }
 
+#light-dark {
+    display: none;
+}
+
+#light-dark:checked~* {
+    --light-dark-toggle-image: url(../images/sun.svg);
+    --main-color: rgb(0, 75, 100);
+    --main-color-translucent: rgba(0, 75, 100, 0.7);
+    --link-color: rgb(0, 255, 255);
+    --text-color: rgb(175, 175, 255);
+}
+
 header {
     position: sticky;
     top: 0;
     left: 0;
     display: flex;
-    background-color: #00ffff;
+    background-color: var(--main-color);
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.light-dark-toggle {
+    height: 30px;
+    width: 30px;
+    background-image: var(--light-dark-toggle-image);
+    background-size: contain;
+    margin-right: 15px;
 }
 
 img:hover {
@@ -49,11 +77,11 @@ img:hover {
     padding: 15px;
     font-family: 'Sansita';
     font-size: 20px;
-    color: #0000ff;
+    color: var(--text-color);
 }
 
 #links a:hover {
-    color: rgb(0, 0, 50);
+    color: var(--link-color);
 }
 
 main {
@@ -63,7 +91,7 @@ main {
 main h1 {
     font-family: 'Sansita';
     font-size: 48px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
     margin: 0px;
     margin-bottom: 10px;
 }
@@ -71,7 +99,7 @@ main h1 {
 main h2 {
     font-family: 'Sansita';
     font-size: 36px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
     margin: 0px;
     margin-bottom: 20px;
 }
@@ -79,54 +107,53 @@ main h2 {
 main h3{
     font-family: 'Sansita';
     font-size: 24px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
     margin: 0px;
     margin-bottom: 10px;
 }
 
-#info figure {
-    text-align: center;
+#info img {
+    width: 20vw;
+    height: auto;
     float: left;
     margin-right: 20px;
-}
-
-#info figure img {
-    width: 100%;
-    height: auto;
-}
-
-#info figcaption {
-    font-family: 'Sansita';
-    font-size: 24px;
-    color: rgb(0, 0, 50);
 }
 
 main p {
     font-family: 'Sansita';
     font-size: 32px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
+    margin: 0px;
+    text-align: justify;
 }
 
-#form{
+form {
     display: flex;
     flex-direction: column;
     align-content: space-between;
 }
 
-#personal-information, #product-details{
-    background-color: #00ffffad;
+article {
+    background-color: var(--main-color-translucent);
     border-radius: 15px;
     padding: 20px;
+    font-family: 'Sansita';
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+#personal-information, #product-details {
+    border-radius: 15px;
     margin-bottom: 20px;
     font-family: 'Sansita';
     font-size: 20px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
 }
 
 #personal-information select, input {
     font-family: 'Sansita';
     font-size: 16px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
     border-style: none;
     border-radius: 10px;
     padding: 5px;
@@ -137,7 +164,7 @@ main p {
 #product-details select, input {
     font-family: 'Sansita';
     font-size: 16px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
     border-style: none;
     border-radius: 10px;
     padding: 5px;
@@ -147,7 +174,7 @@ main p {
 
 #send-request-container input {
     border-style: solid;
-    border-color:rgb(0, 0, 50);
+    border-color:var(--text-color);
     border-width: 3px;
     border-radius: 15px;
     padding: 10px;
@@ -156,7 +183,7 @@ main p {
 }
 
 footer {
-    background-color: #00ffff;
+    background-color: var(--main-color);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -167,7 +194,7 @@ footer {
     padding-left: 15px;
     font-family: 'Sansita';
     font-size: 16px;
-    color: rgb(0, 0, 50);
+    color: var(--text-color);
 }
 
 #contact-links {
@@ -185,11 +212,11 @@ footer {
     padding: 15px;
     font-family: 'Sansita';
     font-size: 16px;
-    color: #0000ff;
+    color: var(--text-color);
 }
 
 #contact-links a:hover {
-    color: rgb(0, 0, 50);
+    color: var(--link-color);
 }
 
 #contact-links a img {
