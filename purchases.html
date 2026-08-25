@@ -21,6 +21,7 @@
         </script>
     </head>
     <body>
+        <input type="checkbox" id="light-dark">
         <header>
             <img id="logo" src="sources/images/logo.png" alt="Mooswa logo">
             <div>
@@ -29,6 +30,7 @@
                     <a href="/info">¿Quiénes somos?</a>
                     <a href="/purchases">Compras</a>
                     <a href="/orders">Encargos</a>
+				    <label for="light-dark" class="light-dark-toggle"></label>
                 </nav>
             </div>
         </header>
@@ -37,7 +39,7 @@
                 <h1>Compras</h1>
                 <h2>¡Realiza tu compra aquí!</h2>
                 <div id="form">
-                    <div id="personal-information">
+                    <form id="personal-information">
                         <h3>Datos personales</h3>
                         <div>
                             <input id="name" type="text" name="name" placeholder="Nombre completo">
@@ -45,7 +47,7 @@
                         <div>
                             <input id="email" type="email" name="email" placeholder="Correo electrónico">
                         </div>
-                    </div>
+                    </form>
                     <form id="product-details">
                         <h3>Detalles del producto</h3>
                         <div>
@@ -103,7 +105,7 @@
                             Cantidad:
                             <input id="quantity" type="number" name="quantity" min="1" value="1" placeholder="1">
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div id="send-request-container">
                     <input id="send-request" type="button" value="Enviar pedido por correo electrónico →" onclick="sendOrderEmail()">
