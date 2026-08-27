@@ -38,17 +38,17 @@
             <article>
                 <h1>Compras</h1>
                 <h2>¡Realiza tu compra aquí!</h2>
-                <div id="form">
-                    <form id="personal-information">
+                <form action="/">
+                    <section class="form-section">
                         <h3>Datos personales</h3>
                         <div>
-                            <input id="name" type="text" name="name" placeholder="Nombre completo">
+                            <input id="name" type="text" name="name" placeholder="Nombre completo" required>
                         </div>
                         <div>
-                            <input id="email" type="email" name="email" placeholder="Correo electrónico">
+                            <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
                         </div>
-                    </form>
-                    <form id="product-details">
+                    </section>
+                    <section class="form-section">
                         <h3>Detalles del producto</h3>
                         <div>
                             Talle:
@@ -74,7 +74,7 @@
                         </div>
                         <div>
                             Cantidad de hojas:
-                            <input id="page-ammount"type="number" name="page-ammount" min="16" max="80" value="64" placeholder="64">
+                            <input id="page-ammount"type="number" name="page-ammount" min="16" max="80" value="64" placeholder="64" required>
                         </div>
                         <div>
                             Espiral:
@@ -103,13 +103,13 @@
                         </div>
                         <div>
                             Cantidad:
-                            <input id="quantity" type="number" name="quantity" min="1" value="1" placeholder="1">
+                            <input id="quantity" type="number" name="quantity" min="1" value="1" placeholder="1" required>
                         </div>
-                    </form>
-                </div>
-                <div id="send-request-container">
-                    <input id="send-request" type="button" value="Enviar pedido por correo electrónico →" onclick="sendOrderEmail()">
-                </div>
+                    </section>
+                    <button id="send-request" type="button" onclick="sendPurchaseEmail()">
+                        Enviar pedido por correo electrónico →
+                    </button>
+                </form>
             </article>
         </main>
         <footer>

@@ -6,6 +6,11 @@
         <title>Mooswa | Encargos</title>
         <link rel="stylesheet" href="sources/styles/styles.css">
         <link rel="icon" type="image/png" href="sources/images/favicon.png">
+        <script type="module">
+            import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/+esm';
+            window.emailjs = emailjs;
+            emailjs.init("PQMcpg_IlfZb_5Qi2");
+        </script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MYZS1WR58"></script>
         <script>
@@ -33,7 +38,28 @@
             <article>
                 <h1>Encargos</h1>
                 <h2>¡Realiza tu encargo personalizado aquí!</h2>
-                <p>PRÓXIMAMENTE</p>
+                <form id="order-form">
+                    <section class="form-section">
+                        <h3>Datos personales</h3>
+                        <div>
+                            <input id="name" type="text" name="name" placeholder="Nombre completo" required>
+                        </div>
+                        <div>
+                            <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                    </section>
+                    <section class="form-section">
+                        <h3>Detalles del encargo</h3>
+                        <div>
+                            <textarea id="order-text" class="form" placeholder="Describe tu cuaderno ideal..." required></textarea>
+                        </div>
+                        <div>
+                            Sube un archivo de referencia (opcional):<br>
+                            <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png, .pdf">
+                        </div>
+                    </section>
+                    <button id="send-request" type="button" onclick="sendOrderEmail()">Enviar pedido por correo electrónico →</button>
+                </form>
             </article>
         </main>
         <footer>
@@ -53,5 +79,6 @@
                 </a>
             </nav>
         </footer>
+        <script src="sources/scripts/script.js"></script>
     </body>
 </html>
