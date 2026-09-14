@@ -22,37 +22,37 @@
     </head>
     <body>
         <input type="checkbox" id="light-dark">
-        <header>
-            <img id="logo" src="sources/images/logo.png" alt="Mooswa logo">
+        <header class="header">
+            <img class="header__logo" src="sources/images/logo.png" alt="Mooswa logo">
             <div>
-                <nav id="links">
-                    <a href="/">Página principal</a>
-                    <a href="/info">¿Quiénes somos?</a>
-                    <a href="/purchases">Compras</a>
-                    <a href="/orders">Encargos</a>
-				    <label for="light-dark" class="light-dark-toggle"></label>
+                <nav class="header__links links">
+                    <a class="header__link link" href="/">Página principal</a>
+                    <a class="header__link link" href="/info">¿Quiénes somos?</a>
+                    <a class="header__link link" href="/purchases">Compras</a>
+                    <a class="header__link link" href="/orders">Encargos</a>
+				    <label class="header__toggle--light-dark-modes" for="light-dark"></label>
                 </nav>
             </div>
         </header>
-        <main>
-            <article>
-                <h1>Compras</h1>
-                <h2>¡Realiza tu compra aquí!</h2>
-                <form action="/">
-                    <section class="form-section">
-                        <h3>Datos personales</h3>
+        <main class="main">
+            <article class="main__article">
+                <h1 class="article__title">Compras</h1>
+                <h2 class="article__subtitle">¡Realiza tu compra aquí!</h2>
+                <form class="article__form article__form--purchases" action="/">
+                    <section class="form__section form__section--personal-information">
+                        <h3 class="form__heading heading">Datos personales</h3>
                         <div>
-                            <input id="name" type="text" name="name" placeholder="Nombre completo" required>
+                            <input class="form__input form__input--name" id="name" type="text" name="name" placeholder="Nombre completo" required>
                         </div>
                         <div>
-                            <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
+                            <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="Correo electrónico" required>
                         </div>
                     </section>
-                    <section class="form-section">
-                        <h3>Detalles del producto</h3>
+                    <section class="form__section form__section--product-details">
+                        <h3 class="form__heading heading">Detalles del producto</h3>
                         <div>
                             Talle:
-                            <select id="size">
+                            <select class="form__select form__select--size" id="size">
                                 <option value="">Selecciona el talle</option>
                                 <option value="Libreta pequeña">Libreta pequeña</option>
                                 <option value="Libreta mediana">Libreta mediana</option>
@@ -64,7 +64,7 @@
                         </div>
                         <div>
                             Tapa:
-                            <select id="cover">
+                            <select class="form__select form__select--cover" id="cover">
                                 <option value="">Selecciona el tipo de tapa</option>
                                 <option value="Plástico">Plástico</option>
                                 <option value="Cartón">Cartón</option>
@@ -74,18 +74,18 @@
                         </div>
                         <div>
                             Cantidad de hojas:
-                            <input id="page-ammount"type="number" name="page-ammount" min="16" max="80" value="64" placeholder="64" required>
+                            <input class="form__input form__input--page-amount" id="page-ammount" type="number" name="page-ammount" min="16" max="80" value="64" placeholder="64" required>
                         </div>
                         <div>
                             Espiral:
-                            <select id="spiral">
+                            <select class="form__select form__select--spiral" id="spiral">
                                 <option value="Sí">Sí</option>
                                 <option value="No">No</option>
                             </select>
                         </div>
                         <div>
                             Formato:
-                            <select id="format">
+                            <select class="form__select form__select--format" id="format">
                                 <option value="">Seleccione el formato</option>
                                 <option value="Rayado">Rayado</option>
                                 <option value="Liso">Liso</option>
@@ -95,7 +95,7 @@
                         </div>
                         <div>
                             Orientación:
-                            <select id="orientation">
+                            <select class="form__select form__select--orientation" id="orientation">
                                 <option value="">Seleccione la orientación</option>
                                 <option value="Vertical">Vertical</option>
                                 <option value="Horizontal">Horizontal</option>
@@ -103,28 +103,28 @@
                         </div>
                         <div>
                             Cantidad:
-                            <input id="quantity" type="number" name="quantity" min="1" value="1" placeholder="1" required>
+                            <input class="form__input form__input--quantity" id="quantity" type="number" name="quantity" min="1" value="1" placeholder="1" required>
                         </div>
                     </section>
-                    <button id="send-request" type="button" onclick="sendPurchaseEmail()">
+                    <button class="form__button form__button--send-request" type="button" onclick="sendPurchaseEmail()">
                         Enviar pedido por correo electrónico →
                     </button>
                 </form>
             </article>
         </main>
-        <footer>
-            <p id="copyright">© 2026 Mooswa. Todos los derechos reservados.</p>
-            <nav id="contact-links">
-                <a href="mailto:steelhnos@gmail.com" target="_blank">
-                    <img src="sources/images/email_icon.png" alt="Correo electrónico">
+        <footer class="footer">
+            <p class="footer__copyright">© 2026 Mooswa. Todos los derechos reservados.</p>
+            <nav class="footer__links links">
+                <a class="footer__link link" href="mailto:steelhnos@gmail.com" target="_blank">
+                    <img class="link__img" src="sources/images/email_icon.png" alt="Correo electrónico">
                     Correo electrónico
                 </a>
-                <a href="https://excelenciamooswa.blogspot.com" target="_blank">
-                    <img src="sources/images/blogger_icon.png" alt="Blog">
+                <a class="footer__link link" href="https://excelenciamooswa.blogspot.com" target="_blank">
+                    <img class="link__img" src="sources/images/blogger_icon.png" alt="Blog">
                     Blog
                 </a>
-                <a href="https://instagram.com/mooswa_uy" target="_blank">
-                    <img src="sources/images/instagram_icon.png" alt="Instagram">
+                <a class="footer__link link" href="https://instagram.com/mooswa_uy" target="_blank">
+                    <img class="footer__link__img" src="sources/images/instagram_icon.png" alt="Instagram">
                     Instagram
                 </a>
             </nav>
